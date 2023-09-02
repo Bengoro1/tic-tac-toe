@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  font-family: 'Handjet', cursive;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr 75px;
+}
+
+.header {
+  font-size: 40px;
+  padding: 3px;
+  background-color: rgb(140, 168, 62);
+  text-align: center;
+  color: white;
+  align-self: center;
+  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(197, 192, 192, 0.547);
+}
+
+.marker {
+  display: grid;
+  grid-template-columns: 80px 80px;
+  text-align: center;
+}
+
+.marker-cell {
+  font-size: 85px;
+  cursor: pointer;
+  height: 80px;
+}
+
+.player1-container {
+  position: absolute;
+  left: 10%;
+}
+
+.player2-container {
+  position: absolute;
+  right: 50px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 125px);
+}
+
+.play-field {
+  height: 125px;
+  outline: 2px solid black;
+  margin: 1px;
+  font-size: 125px;
+  text-align: center;
+}
+
+.endScreen {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.retry {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  border: 2px solid black;
+  background-color: rgb(86, 147, 218);
+  color: white;
+  padding: 10px;
+  width: 200px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.container input {
+  outline: none;
+  padding: 10px;
+  border: 1px black solid;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.score-container {
+  position: absolute;
+  top: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 33vw);
+  align-items: center;
+  justify-items: center;
+}
+
+.score-container > div {
+  font-size: 30px;
+}
+
+.score-one {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.endScreen > .retry {
+  bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.start-button {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  position: absolute;
+  bottom: 150px;
+}
+
+.footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer > img {
+  height: 50px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.footer > img:hover {
+  transform: rotate(180deg);
+}
